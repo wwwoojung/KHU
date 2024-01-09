@@ -36,27 +36,25 @@
 }
 
 .more_btn {
-    position: relative;
     padding: 16px 40px;
 
-    background: #DC2F34;
-    color: #fff;
+    background: transparent;
+    color: #202123;
     border: none;
 
-    border-radius: 32px;
+    border: 1px solid #202123;
 
     font-size: 14px;
     text-transform: uppercase;
 
     cursor: pointer;
 
-    margin: 0 0 0 -4px;
     white-space: nowrap;
 }
 
 .more_btn::after {
     content: "\f1e1";
     font-family: 'Material Symbols Outlined';
-
+    margin: 0 0 0 4px;
     vertical-align: -2px;
 }

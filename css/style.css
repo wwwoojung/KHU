@@ -237,7 +237,9 @@ body {
 
 
 
-
+.MainFocus .title {
+    text-align: center;
+}
 
 .MainFocus .focus_con {
     display: flex;
@@ -248,13 +250,134 @@ body {
     flex: 1;
 }
 
+.MainFocus .content .img_box {
+    margin: 0 0 1.6rem 0;
+    border-radius: 4rem 0 0 0;
+    overflow: hidden;
+}
+
 .MainFocus .content .text_box strong {
-    display: block;
     font-size: 1.8rem;
     font-weight: 600;
 
-    /* width: 35rem;
-    text-overflow: ellipsis;
+    margin: 0 0 0.8rem 0;
+
     overflow: hidden;
-    white-space: nowrap; */
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+}
+
+.MainFocus .content .text_box p {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+
+    line-height: 2rem;
+    margin: 0 0 1.6rem 0;
+}
+
+
+
+
+
+
+
+.MainFame {
+    height: 41rem;
+    background: url(../images/main_fame_bg.jpg) no-repeat center center/cover;
+    padding: 6rem 0;
+
+    text-align: center;
+    color: var(--wc);
+}
+
+.MainFame strong {
+    display: block;
+    margin: 0 0 1.6rem 0;
+
+    font-size: 3.6rem;
+    font-family: 'Noto Serif', serif;
+    letter-spacing: 1px;
+}
+
+.MainFame .img_box {
+    margin: 0 0 1.6rem 0;
+}
+
+.MainFame p {
+    font-weight: 300;
+    margin: 0 0 4rem 0;
+}
+
+.MainFame .more_btn {
+    color: var(--secondary_c);
+    border: 1px solid var(--secondary_c);
+}
+
+.MainFame .more_btn:hover {
+    background: var(--secondary_c);
+    color: #243971;
+}
+
+
+
+#Footer {
+    background: #2e2d34;
+    color: var(--gc);
+}
+
+#Footer .footer_top {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 calc((100% - 1200px)/2 + 15px);
+    line-height: 4.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#Footer .footer_top .footer_menu {
+    display: flex;
+    gap: 3rem;
+
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+#Footer .footer_top .family_site select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--gc);
+
+    margin: 0 0 0 0.8rem;
+    padding: 0 2.4rem;
+}
+
+#Footer .footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem calc((100% - 1200px)/2 + 15px);
+}
+
+#Footer .footer_bottom .copyright>ul {
+    display: flex;
+    gap: 3rem;
+
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    margin: 0 0 0.8rem 0;
+}
+
+#Footer .footer_bottom .copyright p {
+    font-size: 1.4rem;
+    font-weight: 300;
 }
