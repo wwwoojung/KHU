@@ -1,0 +1,260 @@
+:root {
+    --main_c: #990E17;
+    --secondary_c: #b49759;
+    --third_c: #243971;
+    --wc: #ffffff;
+    --bc: #202123;
+    --gc: #dddddd;
+}
+
+/* * {
+    outline: 1px solid tomato;
+} */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#Header {}
+
+#Header .header_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+#Header .header_bottom {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    line-height: 7rem;
+}
+
+#Header .header_bottom h1 {
+    width: 19.6rem;
+}
+
+#Header .header_bottom .gnb>ul {
+    display: flex;
+    gap: 4rem;
+}
+
+#Header .header_bottom .gnb>ul a {
+    display: block;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#Header .header_top {
+    background: var(--main_c);
+}
+
+#Header .header_top .util {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: right;
+
+    line-height: 3rem;
+}
+
+#Header .header_top .util a {
+    display: block;
+
+    color: var(--wc);
+    font-size: 1.2rem;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+#Header .header_top .util .icon {
+    font-size: 1.8rem;
+    vertical-align: -5px;
+}
+
+
+
+
+
+
+
+.MainVisual .visual_slide .itm {
+    position: relative;
+    height: 48rem;
+}
+
+.MainVisual .visual_slide .itm01 {
+    background: url(../images/main_slide_R01.jpg) no-repeat center center;
+}
+
+.MainVisual .visual_slide .itm02 {
+    background: url(../images/main_slide_R02.jpg) no-repeat center center;
+}
+
+.MainVisual .visual_slide .itm03 {
+    background: url(../images/main_slide_R03.jpg) no-repeat center center;
+}
+
+.MainVisual .visual_slide .itm04 {
+    background: url(../images/main_slide_R04.jpg) no-repeat center center;
+}
+
+.MainVisual .visual_slide .itm05 {
+    background: url(../images/main_slide_R05.jpg) no-repeat center center;
+}
+
+.MainVisual .visual_slide .text_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 120rem;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.MainVisual .visual_slide .text_box strong {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin: 0 0 0.4rem 0;
+}
+
+.MainVisual .visual_slide .text_box span {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin: 0 0 1.6rem 0;
+}
+
+.MainVisual .visual_slide .text_box p {
+    line-height: 2rem;
+    word-break: keep-all;
+}
+
+.MainVisual .visual_slide .swiper-pagination {
+    position: static;
+    width: auto;
+    text-align: left;
+}
+
+.MainVisual .visual_slide .swiper-pagination .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0;
+
+    margin: 0 0.4rem 0 0;
+}
+
+.MainVisual .visual_slide .swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--main_c);
+}
+
+.MainVisual .visual_slide .slide_dots {
+    position: absolute;
+    top: 13.4rem;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 120rem;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.MainVisual .visual_slide .slide_dots .pause {
+    /* width: 2rem;
+    height: 2rem; */
+
+    border: none;
+    background: transparent;
+    font-size: 0;
+
+    cursor: pointer;
+}
+
+.MainVisual .visual_slide .slide_dots .pause::after {
+    content: "\e034";
+    font-family: 'Material Symbols Outlined';
+    font-size: 2.2rem;
+    padding: 0.4rem;
+
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.MainVisual .visual_slide .slide_dots .pause.on::after {
+    content: "\e037";
+}
+
+.MainVisual .visual_slide .slide_arrows {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    max-width: 120rem;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.MainVisual .visual_slide .swiper-button-next,
+.MainVisual .visual_slide .swiper-button-prev {
+    position: static;
+    display: inline-block;
+
+    width: 5rem;
+    height: 5rem;
+
+    color: var(--bc);
+    background: rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+.MainVisual .visual_slide .swiper-button-next::after,
+.MainVisual .visual_slide .swiper-button-prev::after {
+    font-size: 2rem;
+    font-weight: 900;
+    vertical-align: -2rem;
+}
+
+
+
+
+
+
+.MainFocus .focus_con {
+    display: flex;
+    gap: 3rem;
+}
+
+.MainFocus .focus_con .content {
+    flex: 1;
+}
+
+.MainFocus .content .text_box strong {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    /* width: 35rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
+}

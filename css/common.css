@@ -1,0 +1,62 @@
+.inner {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.default {
+    padding: 80px 0;
+}
+
+.default .title {
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 0 15px;
+
+    text-align: left;
+}
+
+.default .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 40px;
+}
+
+.default .title p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+@media (max-width:768px) {
+    .default .title h2 {
+        font-size: 5vw;
+    }
+}
+
+.more_btn {
+    position: relative;
+    padding: 16px 40px;
+
+    background: #DC2F34;
+    color: #fff;
+    border: none;
+
+    border-radius: 32px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    margin: 0 0 0 -4px;
+    white-space: nowrap;
+}
+
+.more_btn::after {
+    content: "\f1e1";
+    font-family: 'Material Symbols Outlined';
+
+    vertical-align: -2px;
+}
