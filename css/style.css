@@ -4,7 +4,7 @@
     --third_c: #243971;
     --wc: #ffffff;
     --bc: #202123;
-    --gc: #dddddd;
+    --gc: #858585;
 }
 
 /* * {
@@ -292,52 +292,45 @@ body {
 
 
 
-.MainAnnouncement {
+
+.MainLink {
     background: #f9f9f9;
 }
 
-.MainAnnouncement .inner {
+.MainLink .link_title {
+    background: var(--main_c);
+    color: var(--wc);
+
+    padding: 3.2rem 2.4rem;
+}
+
+.MainLink .link_title h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0 0 0.8rem 0;
+    line-height: 4rem;
+}
+
+.MainLink .link_title p {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 2rem;
+    word-break: keep-all;
+}
+
+.MainLink .link_con {
     display: flex;
-    justify-content: space-between;
-    gap: 3rem;
+    gap: 0.8rem;
 }
 
-.MainAnnouncement .inner>* {
-    flex: 1;
-}
-
-.MainAnnouncement .annoucement_con .tab_menu {
-    display: flex;
-    gap: 3rem;
-}
-
-.MainAnnouncement .annoucement_con .tab_menu li.on a {
-    color: var(--main_c);
-}
-
-.MainAnnouncement .annoucement_con .tab_con .content {
-    display: none;
-    background: var(--wc);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.MainAnnouncement .annoucement_con .tab_con .content.on {
-    display: block;
-}
-
-.MainAnnouncement .annoucement_con .tab_con .con_box {
-    padding: 1.6rem 0.8rem;
-}
-
-
-.MainAnnouncement .link_con .link_container>ul {
+.MainLink .link_container>ul {
     display: grid;
     gap: 0.8rem;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.MainAnnouncement .link_con .link_container>ul li {
-    min-height: 8rem;
+.MainLink .link_container>ul li {
+    height: 8rem;
 
     display: flex;
     align-items: center;
@@ -345,19 +338,145 @@ body {
     background: var(--wc);
 }
 
-.MainAnnouncement .link_con .link_container>ul a {
+.MainLink .link_container>ul a {
     display: block;
     width: 100%;
 
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.6rem;
-
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     word-break: keep-all;
-    padding: 0 1.6rem;
+
+    padding: 2.4rem 1.6rem;
 }
 
+
+
+
+
+
+
+
+
+
+.MainNotice {}
+
+.MainNotice h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.MainNotice .notice_con {
+    display: flex;
+    gap: 3rem;
+}
+
+.MainNotice .notice_con>* {
+    flex: 1;
+}
+
+.MainNotice .annoucement_con .top_content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 0 0.7rem 0;
+
+    border-bottom: 1px solid var(--bc);
+}
+
+.MainNotice .annoucement_con .top_content .tab_menu {
+    display: flex;
+}
+
+.MainNotice .annoucement_con .top_content .tab_menu li {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.MainNotice .annoucement_con .top_content .tab_menu li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    width: 0.1rem;
+    height: 1rem;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.MainNotice .annoucement_con .top_content .tab_menu li a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+
+    color: var(--gc);
+    font-weight: 300;
+}
+
+.MainNotice .annoucement_con .top_content .tab_menu li.on a {
+    color: var(--main_c);
+    font-weight: 500;
+}
+
+.MainNotice .annoucement_con .tab_con .content {
+    display: none;
+}
+
+.MainNotice .annoucement_con .tab_con .content.on {
+    display: block;
+}
+
+.MainNotice .annoucement_con .tab_con .con_box {
+    padding: 2rem 1.2rem 1.2rem 1.2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.MainNotice .annoucement_con .tab_con .con_box strong {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    margin: 0 0 0.4rem 0;
+}
+
+.MainNotice .annoucement_con .tab_con .con_box span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--gc);
+    margin: 0 0 1.6rem 0;
+}
+
+.MainNotice .annoucement_con .tab_con .con_box p {}
+
+.MainNotice .news_con .top_content {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 0 2rem 0;
+    padding: 0 0 0.7rem 0;
+
+    border-bottom: 1px solid var(--bc);
+}
+
+.MainNotice .news_con a {
+    display: block;
+    padding: 0.25rem 1.2rem;
+    transition: 0.5s;
+}
+
+.MainNotice .news_con a:hover {
+    color: var(--main_c);
+    transform: rotate(90deg);
+}
+
+.MainNotice .news_con .news_box {
+    display: flex;
+    gap: 1.5rem;
+}
 
 
 
