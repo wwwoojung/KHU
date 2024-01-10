@@ -44,7 +44,7 @@
 
     border: 1px solid #202123;
 
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
 
     cursor: pointer;
@@ -55,6 +55,8 @@
 .more_btn::after {
     content: "\f1e1";
     font-family: 'Material Symbols Outlined';
+
+    font-size: 14px;
     margin: 0 0 0 4px;
     vertical-align: -2px;
 }

@@ -237,6 +237,10 @@ body {
 
 
 
+
+
+
+
 .MainFocus .title {
     text-align: center;
 }
@@ -272,6 +276,8 @@ body {
 }
 
 .MainFocus .content .text_box p {
+    font-size: 1.4rem;
+
     overflow: hidden;
     white-space: normal;
     text-overflow: ellipsis;
@@ -283,6 +289,77 @@ body {
     line-height: 2rem;
     margin: 0 0 1.6rem 0;
 }
+
+
+
+.MainAnnouncement {
+    background: #f9f9f9;
+}
+
+.MainAnnouncement .inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.MainAnnouncement .inner>* {
+    flex: 1;
+}
+
+.MainAnnouncement .annoucement_con .tab_menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.MainAnnouncement .annoucement_con .tab_menu li.on a {
+    color: var(--main_c);
+}
+
+.MainAnnouncement .annoucement_con .tab_con .content {
+    display: none;
+    background: var(--wc);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.MainAnnouncement .annoucement_con .tab_con .content.on {
+    display: block;
+}
+
+.MainAnnouncement .annoucement_con .tab_con .con_box {
+    padding: 1.6rem 0.8rem;
+}
+
+
+.MainAnnouncement .link_con .link_container>ul {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+
+.MainAnnouncement .link_con .link_container>ul li {
+    min-height: 8rem;
+
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--wc);
+}
+
+.MainAnnouncement .link_con .link_container>ul a {
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+
+    word-break: keep-all;
+    padding: 0 1.6rem;
+}
+
+
+
 
 
 
@@ -313,7 +390,7 @@ body {
 }
 
 .MainFame p {
-    font-weight: 300;
+    font-weight: 200;
     margin: 0 0 4rem 0;
 }
 
@@ -359,6 +436,10 @@ body {
 
     margin: 0 0 0 0.8rem;
     padding: 0 2.4rem;
+}
+
+#Footer .footer_top .family_site select option {
+    color: var(--bc);
 }
 
 #Footer .footer_bottom {
