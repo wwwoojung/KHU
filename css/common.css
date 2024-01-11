@@ -66,3 +66,8 @@
     margin: 0 0 0 4px;
     vertical-align: -2px;
 }
+
+.more_btn:hover {
+    background: #202123;
+    color: #fff;
+}
