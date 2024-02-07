@@ -20,11 +20,11 @@ body {
 }
 
 #Header {
-    height: 10rem;
+    height: 13rem;
 }
 
 #Header.on {
-    height: 7rem;
+    height: 10rem;
 }
 
 #Header .header_wrap {
@@ -47,7 +47,7 @@ body {
     justify-content: space-between;
     width: 100%;
 
-    line-height: 7rem;
+    line-height: 10rem;
 }
 
 #Header .header_bottom h1 {
@@ -62,7 +62,7 @@ body {
 #Header .header_bottom .gnb>ul a {
     display: block;
 
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -547,6 +547,24 @@ body {
         font-size: 6vw;
     }
 }
+
+
+
+
+
+
+
+.MainQuickMenu .title {
+    text-align: center;
+}
+
+.MainQuickMenu .w_inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
 
 
 
