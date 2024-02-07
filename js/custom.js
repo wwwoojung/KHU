@@ -21,8 +21,10 @@ $(function () {
 
         if (SCT > 0) {
             $('#Header .header_wrap').addClass('on');
+            $('#Header').addClass('on');
         } else {
             $('#Header .header_wrap').removeClass('on');
+            $('#Header').removeClass('on');
         }
     })
 

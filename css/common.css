@@ -10,17 +10,18 @@
 
 .default .title {
     max-width: 1200px;
-    margin: 0 auto 32px auto;
+    margin: 0 auto 24px auto;
     padding: 0 15px;
 
     text-align: left;
 }
 
 .default .title h2 {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    line-height: 40px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 32px;
+
+    text-transform: uppercase;
 }
 
 .default .title p {
