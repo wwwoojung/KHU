@@ -260,33 +260,49 @@ body {
 
 
 
-.MainVisual .visual_slide {
+/* .MainVisual .visual_slide {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+} */
+
+.MainVisual .visual_slide {}
 
 .MainVisual .visual_slide .itm {
     position: relative;
     height: 48rem;
 }
 
+.MainVisual .visual_slide .itm::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    width: 800px;
+    height: 450px;
+
+    opacity: 0.1;
+
+    background: url(../images/Asset\ 1.svg) no-repeat;
+}
+
 .MainVisual .visual_slide .itm01 {
-    background: url(../images/main_slide_R01.jpg) no-repeat center center/cover;
+    background: var(--main_c) url(../images/main_slide01.jpg) no-repeat right center;
 }
 
 .MainVisual .visual_slide .itm02 {
-    background: url(../images/main_slide_R02.jpg) no-repeat center center/cover;
+    background: var(--main_c) url(../images/main_slide02.jpg) no-repeat right center;
 }
 
 .MainVisual .visual_slide .itm03 {
-    background: url(../images/main_slide_R03.jpg) no-repeat center center/cover;
+    background: var(--main_c) url(../images/main_slide03.jpg) no-repeat right center;
 }
 
 .MainVisual .visual_slide .itm04 {
-    background: url(../images/main_slide_R04.jpg) no-repeat center center/cover;
+    background: var(--main_c) url(../images/main_slide04.jpg) no-repeat right center;
 }
 
 .MainVisual .visual_slide .itm05 {
-    background: url(../images/main_slide_R05.jpg) no-repeat center center/cover;
+    background: var(--main_c) url(../images/main_slide05.jpg) no-repeat right center;
 }
 
 .MainVisual .visual_slide .text_box {
@@ -298,12 +314,14 @@ body {
     max-width: 120rem;
     padding: 0 1.5rem;
     width: 100%;
+
+    color: var(--wc);
 }
 
 .MainVisual .visual_slide .text_box strong {
     display: block;
     font-size: 3.6rem;
-    font-weight: 800;
+    font-weight: 700;
     margin: 0 0 0.4rem 0;
 
     word-break: keep-all;
@@ -312,7 +330,7 @@ body {
 .MainVisual .visual_slide .text_box span {
     display: block;
     font-size: 3.6rem;
-    font-weight: 800;
+    font-weight: 700;
     margin: 0 0 1.6rem 0;
 
     word-break: keep-all;
@@ -335,10 +353,11 @@ body {
     border-radius: 0;
 
     margin: 0 0.4rem 0 0;
+    background: var(--wc);
 }
 
 .MainVisual .visual_slide .swiper-pagination .swiper-pagination-bullet-active {
-    background: var(--main_c);
+    background: var(--secondary_c);
 }
 
 .MainVisual .visual_slide .slide_dots {
@@ -366,6 +385,7 @@ body {
     font-size: 0;
 
     cursor: pointer;
+    color: var(--wc);
 }
 
 .MainVisual .visual_slide .slide_dots .pause::after {
@@ -552,10 +572,37 @@ body {
 
 
 
+.MainQuickMenu {
+    padding: 40px 0;
+    position: relative;
+}
 
+.MainQuickMenu::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 230px;
+
+    background: var(--third_c);
+}
 
 .MainQuickMenu .title {
+    max-width: 1200px;
+    margin: 0 auto 24px auto;
+    padding: 0 15px;
     text-align: center;
+    color: var(--wc);
+}
+
+.MainQuickMenu .title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+
+    text-transform: uppercase;
 }
 
 .MainQuickMenu .w_inner {
@@ -564,7 +611,67 @@ body {
     padding: 0 15px;
 }
 
+.MainQuickMenu .tab_menu {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
 
+    margin: 0 0 24px 0;
+}
+
+.MainQuickMenu .tab_menu>li>a {
+    position: relative;
+    display: block;
+
+    padding: 8px 32px;
+
+    font-weight: 600;
+
+    color: var(--third_c);
+    background: var(--wc);
+    border-radius: 50px;
+}
+
+.MainQuickMenu .tab_menu>li.on>a {
+    background: var(--secondary_c);
+}
+
+.MainQuickMenu .tab_content {
+    padding: 32px 80px;
+    background: var(--wc);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.MainQuickMenu .tab_content .menu_con {
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainQuickMenu .tab_content .menu_con .itm a {
+    display: block;
+    text-align: center;
+}
+
+.MainQuickMenu .tab_content .menu_con .itm .icon {
+    display: inline-block;
+    font-size: 40px;
+
+    margin: 0 0 16px 0;
+    padding: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+    color: #555;
+}
+
+.MainQuickMenu .tab_content .menu_con .itm strong {
+    display: block;
+    font-weight: 500;
+}
 
 
 
