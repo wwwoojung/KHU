@@ -56,15 +56,78 @@ body {
 
 #Header .header_bottom .gnb>ul {
     display: flex;
-    gap: 4rem;
 }
 
-#Header .header_bottom .gnb>ul a {
+
+#Header .header_bottom .gnb>ul>li>a {
     display: block;
+
+    padding: 0 2rem;
 
     font-size: 2rem;
     font-weight: 600;
     white-space: nowrap;
+}
+
+#Header .header_bottom .gnb>ul>li:hover .depth2 {
+    height: 450px;
+    visibility: visible;
+    transition: height 1s;
+}
+
+#Header .header_bottom .gnb .depth2 {
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    right: 0;
+    padding: 0 calc((100% - 1200px)/2 + 15px);
+
+    display: flex;
+    justify-content: right;
+    gap: 6rem;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+#Header .header_wrap.on .header_bottom .gnb .depth2 {
+    top: 10rem;
+}
+
+#Header .header_bottom .gnb .depth2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    background: linear-gradient(-90deg, var(--wc) 70%, var(--main_c) 70%);
+}
+
+#Header .header_bottom .gnb .depth2>li {
+    background: var(--wc);
+}
+
+#Header .header_bottom .gnb .depth2>li>a {
+    display: block;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 80px;
+
+}
+
+#Header .header_bottom .gnb .depth3>li>a {
+    display: block;
+
+    font-size: 16px;
+    line-height: 40px;
 }
 
 #Header .header_top {
@@ -246,6 +309,61 @@ body {
     /* r */
     #Header .m_open {
         display: block;
+    }
+
+    #Header .header_bottom .gnb>ul>li:hover .depth2 {
+        height: 100%;
+        visibility: visible;
+        transition: height 1s;
+    }
+
+    #Header .header_bottom .gnb .depth2 {
+        display: flex;
+        justify-content: right;
+        gap: 6rem;
+
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+
+        /* r */
+        position: static;
+        flex-direction: column;
+        justify-content: left;
+        gap: 0;
+
+        height: 100%;
+        visibility: visible;
+        overflow: scroll;
+    }
+
+    #Header .header_bottom .gnb .depth2::before {
+        display: none;
+    }
+
+    #Header .header_bottom .gnb .depth2>li {
+        background: var(--wc);
+    }
+
+    #Header .header_bottom .gnb .depth2>li>a {
+        display: block;
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 80px;
+
+    }
+
+
+
+    #Header .header_bottom .gnb .depth3>li>a {
+        display: block;
+
+        font-size: 16px;
+        line-height: 40px;
     }
 }
 
