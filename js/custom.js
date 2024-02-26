@@ -52,4 +52,36 @@ $(function () {
         $(this).toggleClass('is-active');
         $('#Header .gnb').toggleClass('on');
     })
+
+
+    $('#Header .header_wrap .gnb>ul>li>a').on('click', function (e) {
+        e.preventDefault();
+        const IDX = $(this).parent().index();
+
+        if ($('#Header .header_wrap .gnb').hasClass('on')) {
+            $('#Header .header_wrap .gnb .depth2').eq(IDX).slideToggle();
+        } else {
+            return
+        }
+    })
+
+    $('#Header .header_wrap .gnb .depth2>li>a').on('click', function (e) {
+        e.preventDefault();
+        const LEN = $(this).parent().length;
+        const PR_IDX = $(this).parent().parent().parent().index();
+        const IDX = $(this).parent().index();
+        console.log(LEN);
+        console.log(PR_IDX);
+        console.log(IDX);
+        if ($('#Header .header_wrap .gnb').hasClass('on')) {
+            $('#Header .header_wrap .gnb .depth3').eq(PR_IDX).slideToggle();
+        }
+    })
+
+
+    $('#Header').on('wheel touchmove', function (e) {
+        if ($('#Header .header_wrap .gnb').hasClass('on')) {
+            e.preventDefault();
+        }
+    })
 })

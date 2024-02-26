@@ -54,6 +54,7 @@ body {
     width: 19.6rem;
 }
 
+
 #Header .header_bottom .gnb>ul {
     display: flex;
 }
@@ -70,7 +71,7 @@ body {
 }
 
 #Header .header_bottom .gnb>ul>li:hover .depth2 {
-    height: 450px;
+    height: 660px;
     visibility: visible;
     transition: height 1s;
 }
@@ -83,8 +84,9 @@ body {
     padding: 0 calc((100% - 1200px)/2 + 15px);
 
     display: flex;
-    justify-content: right;
-    gap: 6rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px 0;
 
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -107,10 +109,11 @@ body {
     bottom: 0;
     z-index: -1;
 
-    background: linear-gradient(-90deg, var(--wc) 70%, var(--main_c) 70%);
+    background: var(--wc);
 }
 
 #Header .header_bottom .gnb .depth2>li {
+    flex: 0 0 250px;
     background: var(--wc);
 }
 
@@ -118,8 +121,8 @@ body {
     display: block;
 
     font-size: 18px;
-    font-weight: 500;
-    line-height: 80px;
+    font-weight: 600;
+    line-height: 48px;
 
 }
 
@@ -127,7 +130,7 @@ body {
     display: block;
 
     font-size: 16px;
-    line-height: 40px;
+    line-height: 32px;
 }
 
 #Header .header_top {
@@ -256,6 +259,8 @@ body {
 
         background: var(--wc);
         transition: 0.5s;
+
+        overflow: auto;
     }
 
     #Header .header_bottom .gnb.on>ul {
@@ -315,6 +320,11 @@ body {
         height: 100%;
         visibility: visible;
         transition: height 1s;
+
+        /* r */
+        transition: none;
+        visibility: visible;
+        display: none;
     }
 
     #Header .header_bottom .gnb .depth2 {
@@ -323,7 +333,6 @@ body {
         gap: 6rem;
 
         border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
         height: 0;
         visibility: hidden;
@@ -331,13 +340,21 @@ body {
 
         /* r */
         position: static;
+        display: none;
+        /* 
         flex-direction: column;
         justify-content: left;
         gap: 0;
-
+        */
         height: 100%;
         visibility: visible;
-        overflow: scroll;
+        overflow: auto;
+        border-bottom: 0;
+        /* display: none; */
+    }
+
+    #Header .header_bottom .gnb .depth2>* {
+        overflow: visible;
     }
 
     #Header .header_bottom .gnb .depth2::before {
@@ -346,24 +363,15 @@ body {
 
     #Header .header_bottom .gnb .depth2>li {
         background: var(--wc);
-    }
 
-    #Header .header_bottom .gnb .depth2>li>a {
-        display: block;
-
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 80px;
-
+        /* r */
+        flex: 0 0 auto;
     }
 
 
-
-    #Header .header_bottom .gnb .depth3>li>a {
-        display: block;
-
-        font-size: 16px;
-        line-height: 40px;
+    #Header .header_bottom .gnb .depth3 {
+        /* r */
+        display: none;
     }
 }
 
