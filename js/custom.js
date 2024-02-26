@@ -67,14 +67,12 @@ $(function () {
 
     $('#Header .header_wrap .gnb .depth2>li>a').on('click', function (e) {
         e.preventDefault();
-        const LEN = $(this).parent().length;
-        const PR_IDX = $(this).parent().parent().parent().index();
+        const LEN = $(this).parent().parent().find('.depth3');
         const IDX = $(this).parent().index();
         console.log(LEN);
-        console.log(PR_IDX);
         console.log(IDX);
         if ($('#Header .header_wrap .gnb').hasClass('on')) {
-            $('#Header .header_wrap .gnb .depth3').eq(PR_IDX).slideToggle();
+            LEN.eq(IDX).slideToggle();
         }
     })
 
