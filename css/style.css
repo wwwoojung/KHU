@@ -85,8 +85,9 @@ body {
 
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 15px 0;
+    /* gap: 15px 0; */
 
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -325,7 +326,6 @@ body {
         transition: none;
         visibility: visible;
         display: none;
-        overflow: scroll;
     }
 
     #Header .header_bottom .gnb .depth2 {
@@ -335,7 +335,6 @@ body {
         display: none;
         height: 100%;
         visibility: visible;
-        overflow: auto;
         border-bottom: 0;
     }
 
